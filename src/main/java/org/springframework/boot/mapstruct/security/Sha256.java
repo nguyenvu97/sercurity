@@ -1,10 +1,16 @@
 package org.springframework.boot.mapstruct.security;
 
+import org.springframework.boot.mapstruct.model.Category;
+
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
+import java.security.DrbgParameters;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Sha256 {
+
     public static String sha256(String input) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -31,4 +37,7 @@ public class Sha256 {
         }
         return hexString.toString();
     }
+
+
+
 }

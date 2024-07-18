@@ -26,9 +26,7 @@ public class Controller {
         category.setDescription("ngon");
         category.setCategoryType("bo re");
         Car car = new Car("thaidui", null, "vip", "1997", "i8",category);
-        CarDto carDto = carMapper.toEntity(car);
-        System.out.println(carDto);
-        return carDto;
+        return carMapper.toEntity(car);
     }
     @GetMapping("/testDto")
     public Car testCategoryMapping() {
